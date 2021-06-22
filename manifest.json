@@ -1,36 +1,46 @@
 {
-    "name": "Freak's Axie Extension",
-    "version": "1.5.0",
-    "description": "An extension to help play Axie Infinity.",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
-    "icons": {
-      "16": "images/rep_icon16.png",
-      "32": "images/rep_icon32.png",
-      "48": "images/rep_icon48.png",
-      "128": "images/rep_icon128.png"
-    },
-    "browser_action": {
-        "default_popup": "popup.html",
-        "default_title": "Freak's Axie Extension",
-        "default_icon": {
-          "16": "images/rep_icon16.png",
-          "32": "images/rep_icon32.png",
-          "48": "images/rep_icon48.png",
-          "128": "images/rep_icon128.png"
-        }
-    },
-    "background": {
-      "scripts": ["options.js", "lib/web3.min.js", "background.js"],
-      "persistent": false
-    },
-    "content_scripts": [
-        {
-            "matches": ["https://marketplace.axieinfinity.com/*"],
-            "js": ["options.js", "traitmapping.js", "contentScript.js"]
-        }
-    ],
-    "web_accessible_resources": [
-      "body-parts.json"
-    ],
-    "manifest_version": 2
+  "manifest_version": 2,
+  "name": "Axie Explorer",
+  "version": "1.1",
+  "description": "Show more information of Axies attributes in the marketplace",
+  "icons": {
+    "96": "images/icon96.png",
+    "48": "images/icon48.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "images/icon48.png",
+    "default_title": "Axie Explorer",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://marketplace.axieinfinity.com/*"
+      ],
+      "js": [
+        "options.js",
+        "traitmapping.js",
+        "contentScript.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "options.js",
+      "lib/web3.min.js",
+      "background.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "body-parts.json"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{f99001b8-444e-4ea8-8235-a59313ed4802}"
+    }
+  }
 }
