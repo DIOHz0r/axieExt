@@ -351,7 +351,7 @@ async function getAxieBriefList() {
         address = await getAccountFromProfile();
         sort = "IdDesc";
         auctionType = "All";
-    } else if (window.location.href.startsWith("https://marketplace.axieinfinity.com/profile/ronin:\")) { // || window.location.href.startsWith(\"https://marketplace.axieinfinity.com/profile/0x")) {
+    } else if (window.location.href.startsWith("https://marketplace.axieinfinity.com/profile/ronin:")) { // || window.location.href.startsWith(\"https://marketplace.axieinfinity.com/profile/0x")) {
         address = getAccount();
         sort = "IdDesc";
         auctionType = "All";
