@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Axie Explorer",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Show more information of Axies attributes in the marketplace",
   "icons": {
     "96": "images/icon96.png",
@@ -9,7 +9,9 @@
   },
   "permissions": [
     "activeTab",
-    "storage"
+    "storage",
+    "https://marketplace.axieinfinity.com/*",
+    "https://axieinfinity.com/*"
   ],
   "browser_action": {
     "default_icon": "images/icon48.png",
