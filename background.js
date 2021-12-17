@@ -1,3 +1,9 @@
+try {
+    importScripts("options.js");
+} catch (e) {
+    console.log(e);
+}
+
 chrome.runtime.onInstalled.addListener(function () {
     getOptions((response) => {
         if (Object.keys(response).length === 0) {
