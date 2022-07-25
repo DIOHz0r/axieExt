@@ -589,7 +589,7 @@ TODO: add support for breeding window
                 let pathNode;
                 let detailsNode;
                 //this will break when localization is implemented on the site
-                xpath = "//div[text()='Stats']";
+                xpath = "//div[text()='Body parts']";
                 pathNode = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
                 detailsNode = pathNode;
                 let traits = genGenesDiv(axie, detailsNode, "details");
